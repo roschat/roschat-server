@@ -13,7 +13,7 @@
 * RedOS 8 
 * AlmaLinux 9
 
-После установки образа с выбранной ОС, для начала установки Вам необходимо выполнить установочный скрипт. Вы можете [скачать](https://raw.githubusercontent.com/roschat/roschat-server/refs/heads/main/install_podman.sh) его и выполнить установку вручную или использовать команды curl или wget для установки.
+После установки образа с выбранной ОС, для начала установки сервера Вам необходимо выполнить установочный скрипт. Вы можете [скачать](https://raw.githubusercontent.com/roschat/roschat-server/refs/heads/main/install_podman.sh) его и выполнить установку вручную или использовать команды curl или wget для установки.
 
 ```
 curl -o- https://raw.githubusercontent.com/roschat/roschat-server/refs/heads/main/install_podman.sh | bash
@@ -24,8 +24,9 @@ wget -qO- https://raw.githubusercontent.com/roschat/roschat-server/refs/heads/ma
 
 > [!NOTE]
 > Вовремя установки следующие сетевые порты, будут открыты и добавлены как исключение в службу сетевой безопасности:
-> * 80 — HTTP
-> * 443 — HTTPS
+> * 80 — HTTP (Web-клиент)
+> * 443 — HTTPS (Web-клиент)
+> * 1100 — HTTPS (Администрирование)
 > * 3478, 3479 — TURN 
 
 ## Настройка
