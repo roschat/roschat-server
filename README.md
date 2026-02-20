@@ -1,4 +1,4 @@
-# РОСЧАТ LITE
+# РОСЧАТ
 
 ## Введение
 
@@ -64,4 +64,4 @@ admin
 * [Linux (appImage)](https://firelink.me/download/client-appimage-x64-latest)
 * [MacOS](https://firelink.me/download/client-macos-x64-latest)
 
-При первом подключении пользователь имеет возможность самостоятельно зарегистрироваться на сервере. Администратор системы может выполнить ограничения для этого функционала в разделе [дополнительно](https://github.com/roschat/roschat-server/wiki/%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B8#%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D1%8F-%D0%BD%D0%BE%D0%B2%D1%8B%D1%85-%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D0%B5%D0%B9).
+При первом подключении пользователь имеет возможность самостоятельно [зарегистрироваться](https://github.com/roschat/roschat-server/wiki/%D0%A0%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D1%8F#%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D1%8F) на сервере. Администратор системы может выполнить ограничения для этого функционала в разделе [дополнительно](https://github.com/roschat/roschat-server/wiki/%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B8#%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D1%8F-%D0%BD%D0%BE%D0%B2%D1%8B%D1%85-%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D0%B5%D0%B9).
