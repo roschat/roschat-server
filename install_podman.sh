@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IMAGE_NAME="repo2.ros.chat/roschat-lite:v3"
+IMAGE_NAME="docker.io/itsoftadmin/roschat-lite:v3"
 CONTAINER_NAME="roschat"
 set -e
 
