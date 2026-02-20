@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IMAGE_NAME="repo2.ros.chat/roschat-lite:v2"
+IMAGE_NAME="repo2.ros.chat/roschat-lite:v3"
 CONTAINER_NAME="roschat"
 set -e
 
@@ -74,18 +74,20 @@ deploy_roschat() {
     PODMAN_CMD=(
         podman run -d
         --name "${CONTAINER_NAME}"
-        --restart=unless-stopped
+        --restart=always
         --systemd=always
-        --replace
         -p 80:80/tcp
         -p 443:443/tcp
-        -p 8080:8080/tcp
         -p 1110:1110/tcp
         -p 3478:3478/tcp
         -p 3479:3479/tcp
         -p 3478:3478/udp
         -p 3479:3479/udp
         -p 49152-49182:49152-49182/udp
+        -v "roschat_server:/opt/roschat-server:Z"
+        -v "roschat_pgsql:/var/lib/pgsql:Z"
+        -v "roschat_wlan:/var/db/wlan:Z"
+        -v "roschat_email:/etc/roschat-email:Z"
         "${IMAGE_NAME}"
     )
 
@@ -96,6 +98,10 @@ deploy_roschat() {
     echo "Готово! Статус контейнера:"
     podman ps --filter "name=${CONTAINER_NAME}"
     
+    echo ""
+    echo "Включение автозапуска контейнера..."
+    systemctl enable --now podman-restart
+    echo "Автозапуск включен"
     echo ""
     echo "Для просмотра логов используйте: podman logs ${CONTAINER_NAME}"
     echo "Для входа в контейнер: podman exec -it ${CONTAINER_NAME} /bin/bash"
